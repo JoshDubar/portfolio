@@ -1,0 +1,22 @@
+.socialsContainer {
+  visibility: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+  .socialsContainer {
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    position: fixed;
+    top: 50%;
+    right: 0.5rem;
+    transform: translateY(-50%);
+  }
+
+  .socialsContainer * {
+    font-size: 32px;
+    cursor: pointer;
+    color: black;
+  }
+}
