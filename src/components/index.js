@@ -9,3 +9,4 @@ export { default as Education } from "./Education/Education";
 export { default as Contact } from "./Contact/Contact";
 export { default as Socials } from "./Socials/Socials";
 export { default as TopArrow } from "./TopArrow/TopArrow";
+export { default as MobileMenu } from "./MobileMenu/MobileMenu";

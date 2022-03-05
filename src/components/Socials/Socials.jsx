@@ -2,9 +2,9 @@ import { LinkedinFilled, GithubFilled } from "@ant-design/icons";
 import React from "react";
 import styles from "./Socials.module.css";
 
-const Socials = () => {
+const Socials = ({ className }) => {
   return (
-    <div className={styles.socialsContainer}>
+    <div className={className || styles.socialsContainer}>
       <a href="https://www.linkedin.com/in/joshdubar/" target="_blank">
         <LinkedinFilled
           color="black"

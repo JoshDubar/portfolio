@@ -8,7 +8,7 @@ export default {
       },
     },
     color: {
-      value: ["#EB930F", "#8ECAF4", "#03363D", "#094183"],
+      value: ["#EB930F", "#EB930F", "#EB930F", "#8ECAF4"],
     },
     shape: {
       type: "circle",

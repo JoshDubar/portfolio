@@ -6,7 +6,7 @@ import { MenuOutlined } from "@ant-design/icons";
 import { Button } from "antd";
 import { scrollToSection } from "../../utils";
 
-const NavBar = () => {
+const NavBar = ({ setShowMobileMenu }) => {
   const isDesktop = useMediaQuery({
     query: "(min-width: 1024px)",
   });
@@ -33,7 +33,10 @@ const NavBar = () => {
           </Button>
         </>
       ) : (
-        <div className={styles.hamburgerContainer} onClick={() => {}}>
+        <div
+          className={styles.hamburgerContainer}
+          onClick={() => setShowMobileMenu(true)}
+        >
           <MenuOutlined />
         </div>
       )}

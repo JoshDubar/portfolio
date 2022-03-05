@@ -1,4 +1,5 @@
 import "antd/dist/antd.css";
+import React from "react";
 import {
   NavBar,
   Hero,
@@ -10,33 +11,42 @@ import {
   Contact,
   Socials,
   TopArrow,
+  MobileMenu,
 } from "../components";
 
 export default function Home() {
+  const [showMobileMenu, setShowMobileMenu] = React.useState(false);
+
   return (
     <div className="page">
-      <Particles />
-      <Socials />
-      <TopArrow />
-      <section id="hero">
-        <NavBar />
-        <Hero />
-      </section>
-      <section id="about">
-        <About />
-      </section>
-      <section id="experience">
-        <Experience />
-      </section>
-      <section id="projects">
-        <Projects />
-      </section>
-      <section id="education">
-        <Education />
-      </section>
-      <section id="contact">
-        <Contact />
-      </section>
+      {showMobileMenu ? (
+        <MobileMenu setShowMobileMenu={setShowMobileMenu} />
+      ) : (
+        <>
+          <Particles />
+          <Socials />
+          <TopArrow />
+          <section id="hero">
+            <NavBar setShowMobileMenu={setShowMobileMenu} />
+            <Hero />
+          </section>
+          <section id="about">
+            <About />
+          </section>
+          <section id="experience">
+            <Experience />
+          </section>
+          <section id="projects">
+            <Projects />
+          </section>
+          <section id="education">
+            <Education />
+          </section>
+          <section id="contact">
+            <Contact />
+          </section>
+        </>
+      )}
     </div>
   );
 }

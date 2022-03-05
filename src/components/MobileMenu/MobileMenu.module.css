@@ -1,0 +1,58 @@
+.menuContainer {
+  width: 100vw;
+  height: 100vh;
+}
+
+.exitContainer {
+  font-size: 2rem;
+  position: absolute;
+  top: 1.25rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
+.menuNavContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.menuNavContainer a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+}
+
+.menuLogoContainer a h1 {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.contactButton {
+  font-size: 24px;
+  padding: 6px 24px;
+  height: 64px;
+  margin-top: 1.5rem;
+}
+
+.contactButton:hover {
+  color: black;
+  border-color: black;
+}
+
+.contactButton:focus {
+  color: black;
+  border-color: black;
+}
+
+.socialsMenuContainer {
+  position: absolute;
+  bottom: 1.25rem;
+  font-size: 1rem;
+  display: flex;
+  column-gap: 2rem;
+}

@@ -1,7 +1,10 @@
 .aboutContainer {
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
+  row-gap: 2rem;
+  margin-bottom: 5rem;
 }
 
 .left,
@@ -10,4 +13,90 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.heading {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.right p {
+  margin: 1rem 2rem;
+  font-size: 1rem;
+}
+
+.skillsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.ts,
+.node,
+.postgres,
+.linux,
+.react {
+  width: 80px !important;
+  height: 80px !important;
+}
+
+.react {
+  width: 92px !important;
+}
+
+.golang {
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.aws {
+  width: 100px !important;
+  height: 60px !important;
+}
+
+.next {
+  width: 90px !important;
+  height: 70px !important;
+}
+
+.java {
+  width: 45px !important;
+  height: 120px !important;
+}
+
+.skillsContainer img {
+  min-height: 0 !important;
+  min-width: 0 !important;
+  cursor: pointer;
+}
+
+.expand {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1024px) {
+  .aboutContainer {
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+
+  .left {
+    order: 1;
+  }
+
+  .right {
+    order: 2;
+  }
+
+  .right p {
+    align-self: flex-start;
+    padding-right: 3rem;
+    font-size: 1.125rem;
+  }
 }
