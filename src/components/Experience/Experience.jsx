@@ -1,4 +1,5 @@
 import React from "react";
+import { experienceContent, timelineItems } from "./content";
 import styles from "./Experience.module.css";
 
 const Circle = ({ color, onClick, ...props }) => (
@@ -12,38 +13,13 @@ const Experience = () => {
   };
 
   const [activeItem, setActiveItem] = React.useState(4);
-  const timelineItems = [
-    {
-      circleColor: "#EB930F",
-      text: "Localz",
-      alt: false,
-    },
-    {
-      circleColor: "#8ECAF4",
-      text: "Nasdaq",
-      alt: true,
-    },
-    {
-      circleColor: "#094183",
-      text: "University of Melbourne",
-      alt: false,
-      customWidth: "150px",
-    },
-    {
-      circleColor: "#03363D",
-      text: "Zendesk",
-      alt: true,
-    },
-    {
-      circleColor: "#8ECAF4",
-      text: "DiUS Computing",
-      alt: false,
-    },
-  ];
 
   const timelineItemOnClickHandler = (index) => {
     setActiveItem(index);
   };
+
+  const { company, jobTitle, dateRange, description } =
+    experienceContent[activeItem];
 
   return (
     <div className={styles.experienceContainer}>
@@ -67,6 +43,12 @@ const Experience = () => {
           </div>
         ))}
         <div className={styles.line}></div>
+      </div>
+      <div className={styles.experienceContent}>
+        <h2>{company}</h2>
+        <div className={styles.jobTitle}>{jobTitle}</div>
+        <div className={styles.dateRange}>{dateRange}</div>
+        <p>{description}</p>
       </div>
     </div>
   );
