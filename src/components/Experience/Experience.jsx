@@ -12,7 +12,7 @@ const Experience = () => {
     right: "45px",
   };
 
-  const [activeItem, setActiveItem] = React.useState(4);
+  const [activeItem, setActiveItem] = React.useState(3);
 
   const timelineItemOnClickHandler = (index) => {
     setActiveItem(index);
@@ -23,7 +23,7 @@ const Experience = () => {
 
   return (
     <div className={styles.experienceContainer}>
-      <h2>My Experience</h2>
+      <h2 className={styles.experienceHeading}>My Experience</h2>
       <div className={styles.timeline}>
         {timelineItems.map(({ circleColor, text, alt, customWidth }, index) => (
           <div className={styles.timelineItem} key={index}>
@@ -48,7 +48,9 @@ const Experience = () => {
         <h2>{company}</h2>
         <div className={styles.jobTitle}>{jobTitle}</div>
         <div className={styles.dateRange}>{dateRange}</div>
-        <p>{description}</p>
+        {description.map((text) => (
+          <p className={styles.description}>{text}</p>
+        ))}
       </div>
     </div>
   );
