@@ -1,0 +1,123 @@
+.projectContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.projectBubbleContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+  position: relative;
+}
+
+.dribblrBubble,
+.trukkBubble,
+.simulatorBubble {
+  width: 160px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 1;
+  position: absolute;
+}
+
+.dribblrBubble {
+  top: 50px;
+  left: 10px;
+  background-color: #f8bd1d;
+}
+
+.trukkBubble {
+  top: 200px;
+  right: 20px;
+  border: 3px solid #f8dc56;
+  justify-content: flex-start;
+  background: url(trukk.png);
+  background-size: 160px 90px;
+  background-color: white;
+  background-repeat: no-repeat;
+  align-items: center;
+  background-position: center;
+}
+
+.simulatorBubble {
+  background: url(2020.png);
+  background-size: 100px 100px;
+  top: 400px;
+  left: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-items: center;
+  background-color: #414243;
+}
+
+.projectDescription {
+  margin: 0.25rem 0rem;
+  padding: 0 01rem;
+  text-align: left;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.projectTitleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+}
+
+.projectTitleContainer a {
+  font-size: 32px;
+  color: black;
+}
+
+.projectInfoContainer {
+  margin-top: 550px;
+}
+
+@media screen and (min-width: 1024px) {
+  .projectContainer {
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: relative;
+    width: 100%;
+    align-items: center;
+  }
+
+  .projectHeading {
+    position: absolute;
+    top: 2rem;
+  }
+
+  .trukkBubble {
+    right: 50px;
+    top: 250px;
+  }
+
+  .dribblrBubble {
+    left: 100px;
+    top: 125px;
+  }
+
+  .simulatorBubble {
+    left: 150px;
+    top: 450px;
+  }
+
+  .projectInfoContainer {
+    width: 120%;
+    margin-top: 0;
+  }
+
+  .projectDescription {
+    padding-right: 5rem;
+  }
+}

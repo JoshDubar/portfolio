@@ -14,10 +14,6 @@ const Experience = () => {
 
   const [activeItem, setActiveItem] = React.useState(3);
 
-  const timelineItemOnClickHandler = (index) => {
-    setActiveItem(index);
-  };
-
   const { company, jobTitle, dateRange, description } =
     experienceContent[activeItem];
 
@@ -29,7 +25,7 @@ const Experience = () => {
           <div className={styles.timelineItem} key={index}>
             <Circle
               color={circleColor}
-              onClick={() => timelineItemOnClickHandler(index)}
+              onClick={() => setActiveItem(index)}
               style={{
                 backgroundColor: index === activeItem ? circleColor : "white",
                 borderColor: circleColor,
@@ -49,7 +45,9 @@ const Experience = () => {
         <div className={styles.jobTitle}>{jobTitle}</div>
         <div className={styles.dateRange}>{dateRange}</div>
         {description.map((text) => (
-          <p className={styles.description}>{text}</p>
+          <p className={styles.description} key={text}>
+            {text}
+          </p>
         ))}
       </div>
     </div>

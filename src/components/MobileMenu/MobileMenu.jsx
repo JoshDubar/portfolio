@@ -43,7 +43,7 @@ const MobileMenu = ({ setShowMobileMenu }) => {
         </div>
 
         {menuConfig.map(({ href, onClick, text }) => (
-          <a href={href} onClick={onClick}>
+          <a href={href} onClick={onClick} key={href}>
             {text}
           </a>
         ))}
