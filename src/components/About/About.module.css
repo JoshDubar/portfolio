@@ -5,6 +5,7 @@
   height: 100%;
   row-gap: 2rem;
   margin-bottom: 5rem;
+  z-index: -1;
 }
 
 .left,

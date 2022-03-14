@@ -13,11 +13,13 @@
     top: 50%;
     right: 0.5rem;
     transform: translateY(-50%);
+    z-index: 1;
   }
 
   .socialsContainer * {
     font-size: 32px;
     cursor: pointer;
     color: black;
+    z-index: 1;
   }
 }

@@ -24,12 +24,7 @@ const Projects = () => {
             className={styles.dribblrBubble}
             onClick={() => setSelectedProject(0)}
           >
-            <Image
-              src="/dribblr.png"
-              width="125px"
-              height="110px"
-              style={{ zIndex: -1 }}
-            />
+            <Image src="/dribblr.png" width="125px" height="110px" />
           </div>
         </a>
         <a href={href()}>

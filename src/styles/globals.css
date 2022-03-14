@@ -59,6 +59,11 @@ h1 {
   section {
     height: 100vh;
   }
+
+  #contact {
+    height: unset;
+    margin-bottom: 2rem;
+  }
 }
 
 .page {
@@ -105,4 +110,9 @@ h3 {
   font-size: 1.75rem;
   margin: 0 !important;
   text-align: center;
+}
+
+.ant-form-item-control-input-content {
+  display: flex;
+  justify-content: center;
 }

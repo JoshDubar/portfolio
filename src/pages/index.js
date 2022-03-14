@@ -1,4 +1,5 @@
 import "antd/dist/antd.css";
+import Head from "next/head";
 import React from "react";
 import {
   NavBar,
@@ -19,6 +20,10 @@ export default function Home() {
 
   return (
     <div className="page">
+      <Head>
+        <title>Joshua Dubar | Portfolio</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      </Head>
       {showMobileMenu ? (
         <MobileMenu setShowMobileMenu={setShowMobileMenu} />
       ) : (

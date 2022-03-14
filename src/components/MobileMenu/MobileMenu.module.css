@@ -56,3 +56,11 @@
   display: flex;
   column-gap: 2rem;
 }
+
+@media screen and (max-height: 600px) {
+  .socialsMenuContainer {
+    bottom: 0.5rem;
+    right: 1rem;
+    flex-direction: column;
+  }
+}

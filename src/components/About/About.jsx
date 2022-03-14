@@ -1,5 +1,5 @@
-import { DownOutlined } from "@ant-design/icons";
-import React from "react";
+import { DownOutlined, UpOutlined } from "@ant-design/icons";
+import React, { useState } from "react";
 import styles from "./About.module.css";
 import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
@@ -8,6 +8,8 @@ const About = () => {
   const isDesktop = useMediaQuery({
     query: "(min-width: 1024px)",
   });
+
+  const [expanded, setExpanded] = useState(false);
   return (
     <div className={styles.aboutContainer}>
       <div className={styles.right}>
@@ -22,7 +24,7 @@ const About = () => {
           relationships are what makes coming into work everyday truly
           enjoyable.
         </p>
-        {isDesktop && (
+        {(isDesktop || expanded) && (
           <>
             <p>
               Over the last few years, I've been working hard to become a well
@@ -40,9 +42,9 @@ const About = () => {
           </>
         )}
         {!isDesktop && (
-          <div className={styles.expand}>
-            <span>more</span>
-            <DownOutlined />
+          <div className={styles.expand} onClick={() => setExpanded((p) => !p)}>
+            <span>{expanded ? "less" : "more"}</span>
+            {expanded ? <UpOutlined /> : <DownOutlined />}
           </div>
         )}
       </div>
