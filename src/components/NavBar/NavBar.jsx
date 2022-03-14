@@ -33,12 +33,12 @@ const NavBar = ({ setShowMobileMenu }) => {
           </Button>
         </>
       ) : (
-        <nav
+        <div
           className={styles.hamburgerContainer}
           onClick={() => setShowMobileMenu(true)}
         >
           <MenuOutlined />
-        </nav>
+        </div>
       )}
     </div>
   );
