@@ -13,7 +13,7 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(0);
   const { name, github, website, description } = projects[selectedProject];
 
-  const href = () => (isDesktop ? undefined : "#project-info");
+  const href = () => (isDesktop ? undefined : "#projects");
 
   return (
     <div className={styles.projectContainer}>
@@ -52,7 +52,9 @@ const Projects = () => {
         </div>
 
         {description.map((text) => (
-          <p className={styles.projectDescription}>{text}</p>
+          <p className={styles.projectDescription} key={text}>
+            {text}
+          </p>
         ))}
       </div>
     </div>

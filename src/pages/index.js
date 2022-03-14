@@ -23,6 +23,10 @@ export default function Home() {
       <Head>
         <title>Joshua Dubar | Portfolio</title>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="I'm a Software Engineer with a passion for making lives easier through building highly functional, reliable and scalable web applications."
+        />
       </Head>
       {showMobileMenu ? (
         <MobileMenu setShowMobileMenu={setShowMobileMenu} />
